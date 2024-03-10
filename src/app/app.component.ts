@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 
@@ -13,8 +13,14 @@ import { HomeComponent } from './home/home.component';
 })
 export class AppComponent {
 
+  constructor(private router: Router) { }
  
-  title = 'base';
   
 
+  ngOnInit(): void {
+    
+    this.router.navigate(['/app-home']);
+      
+    }
+    
 }
